@@ -1,2 +1,2 @@
-$ /home/gpichot/holbertonschool-shell/basics
-$
+#!/bin/bash
+pwd
