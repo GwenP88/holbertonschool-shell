@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit -m "permissions task 7" && git push
+git add . && git commit -m "permissions task 8" && git push
