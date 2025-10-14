@@ -1,2 +1,5 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf '%f\n' | LC_ALL=C sort -f
+find . -type f -iname '*.gif' -printf '%f\0' \
+| perl -0pe 's/\.[Gg][Ii][Ff]$//' \
+| LC_ALL=C sort -z -f \
+| tr '\0' '\n'
