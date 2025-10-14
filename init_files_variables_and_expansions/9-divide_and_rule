@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((PUISSANCE / DIVIDE))
+echo $((PUISSANCE / DIVIDE \n))
