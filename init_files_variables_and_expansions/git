@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit -m "task 14" && git push
+git add . && git commit -m "touch && chmod 4 task advanced" && git push
