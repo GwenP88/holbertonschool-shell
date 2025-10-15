@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' "$WATER" | tr 'water' '01234' | printf '%s\n' "$STIR" | tr 'stir.' '01234' | printf '%o\n' &(((printf '%s\n' "$WATER") + (printf '%s\n' "$STIR")) | tr | tr '01234567' 'bestchol' 
+printf '%s\n' "$WATER" | tr 'water' '01234' | printf '%s\n' "$STIR" | tr 'stir.' '01234' | printf '%o\n' $(((printf '%s\n' "$WATER") + (printf '%s\n' "$STIR")) | tr | tr '01234567' 'bestchol'
