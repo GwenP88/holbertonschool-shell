@@ -1,0 +1,9 @@
+#!/bin/bash
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+*/ en ASCII octal
+A = 101 ; Z = 132 ; a = 141 ; z = 172 ; N = 116 ; M = 115 ; n = 156 ; m = 155 ;
+tr '101-132 141-172' '116-132 101-115 156-172 141-155'
+
+*/ avec caractère échapement sinon tr lit chaque chiffre 1 à 1 de façon litéral
+tr '\101-\132\141-\172' '\116-\132\101-\115\156-\172\141-\155'
