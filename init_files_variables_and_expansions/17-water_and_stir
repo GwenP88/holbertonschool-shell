@@ -1,1 +1,2 @@
 #!/bin/bash
+echo "$WATER" | tr 'water' '01234' | echo "$STIR" | tr 'stir' '0123'
