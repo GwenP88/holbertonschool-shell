@@ -76,6 +76,7 @@ Input/output redirection and using pipes
 Manipulating text streams (grep, cut, tr, sort, uniq, wc, head, tail, etc.)
 Creating automated scripts
 Adherence to Bash best practices (syntax, comments, readability)
+
 ---
 
 ## Author
