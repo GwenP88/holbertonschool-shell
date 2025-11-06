@@ -50,38 +50,21 @@ Each file contains a Bash script that fulfills a specific instruction in the Hol
 
 ## Exercise Details
 
-| File | Description |
-
-|----------|--------------|
-| `0-current_working_directory` | Displays the absolute path of the current directory. |
-
-| `1-listit` | Lists the contents of the current directory. |
-
-| `2-bring_me_home` | Changes the current directory to the home directory. |
-
-| `3-listfiles` | Lists the files in the current directory in verbose format. |
-
-| `4-listmorefiles` | Lists all files, including hidden files. |
-
-| `5-listfilesdigitonly` | Lists files, displaying the numeric identifiers of users and groups. |
-
-| `6-firstdirectory` | Creates a directory named `my_first_directory` in `/tmp/`. |
-
-| `7-movethatfile` | Moves a file `betty` from `/tmp/` to `/tmp/my_first_directory/`. |
-
-| `8-firstdelete` | Deletes the file `betty` located in `/tmp/my_first_directory/`. |
-
-| `9-firstdirdeletion` | Deletes the directory `/tmp/my_first_directory/`. |
-
-| `10-back` | Changes the current directory to the previous one. |
-
-| `11-lists` | Lists all files, including those in subdirectories, in a detailed format. |
-
-| `12-file_type` | Displays the type of the file named `iamafile`. |
-
-| `13-symbolic_link` | Creates a symbolic link `__ls__` pointing to `/bin/ls`. |
-
-| `14-copy_html` | Copies all missing or newer `.html` files to the parent directory. |
+1. **0-current_working_directory** — Displays the absolute path of the current directory.  
+2. **1-listit** — Lists the contents of the current directory.  
+3. **2-bring_me_home** — Changes the current directory to the home directory.  
+4. **3-listfiles** — Lists the files in the current directory in verbose format.  
+5. **4-listmorefiles** — Lists all files, including hidden files.  
+6. **5-listfilesdigitonly** — Lists files, displaying the numeric identifiers of users and groups.  
+7. **6-firstdirectory** — Creates a directory named `my_first_directory` in `/tmp/`.  
+8. **7-movethatfile** — Moves a file `betty` from `/tmp/` to `/tmp/my_first_directory/`.  
+9. **8-firstdelete** — Deletes the file `betty` located in `/tmp/my_first_directory/`.  
+10. **9-firstdirdeletion** — Deletes the directory `/tmp/my_first_directory/`.  
+11. **10-back** — Changes the current directory to the previous one.  
+12. **11-lists** — Lists all files, including those in subdirectories, in a detailed format.  
+13. **12-file_type** — Displays the type of the file named `iamafile`.  
+14. **13-symbolic_link** — Creates a symbolic link `__ls__` pointing to `/bin/ls`.  
+15. **14-copy_html** — Copies all missing or newer `.html` files to the parent directory.  
 
 ---
 
