@@ -70,7 +70,6 @@ Clonez le dépôt :
 `git clone` 
 [lien vers le dépot](https://github.com/GwenP88/holbertonschool-shell.git)
 
-
 Positionnez-vous dans le dossier du module :
 `cd holbertonschool-shell/init_files_variables_and_expansions`
 
@@ -82,6 +81,8 @@ Exécutez le script :
 
 Les scripts sont conçus pour être exécutés sur un environnement Ubuntu 20.04 LTS avec Bash version 5.x.
 
+---
+
 ## Contraintes techniques
 
 Chaque script commence par :
@@ -91,12 +92,16 @@ Aucune commande non autorisée ne doit être utilisée.
 Les fichiers doivent être exécutables et ne produire aucune erreur de syntaxe.
 Le code doit respecter les conventions de la formation Holberton (indentation claire, pas d’espaces inutiles, commentaires pertinents) et être compatible avec Betty linter.
 
+---
+
 ## Bonnes pratiques
 Vérifiez toujours la valeur d’une variable avant et après modification.
 Limitez la portée d’une variable lorsque cela est possible (local vs global).
 Utilisez les expansions ($(( ... )), ${VAR}, $(cmd)) de manière appropriée.
 Documentez les segments de script complexes avec des commentaires.
 Testez les modifications dans un terminal propre afin d’éviter les variables d’environnement résiduelles.
+
+---
 
 ## Auteur
 
@@ -106,10 +111,14 @@ Gwen Pichot
 Haute-Savoie, France
 [Profil GitHub](https://github.com/GwenP88)
 
+---
+
 ## Licence
 
 Ce projet est publié sous licence MIT.
 Tu es libre de l’utiliser, le modifier et le redistribuer tant que la licence d’origine est conservée.
+
+---
 
 ## Remerciements
 
