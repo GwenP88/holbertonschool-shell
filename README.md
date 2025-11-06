@@ -121,6 +121,8 @@ holbertonschool-shell/
     ├── 12-directory_permissions
     └── 13-change_group
 
+---
+
 ## Exécution des scripts
 
 Cloner le dépôt :
@@ -137,6 +139,8 @@ Exécuter le script :
 `./nom_du_script`
 Tous les scripts sont testés sur Ubuntu 20.04 LTS avec bash (version 5.x)
 
+---
+
 ## Contraintes techniques
 
 Interpréteur : #!/bin/bash en première ligne de chaque script
@@ -144,6 +148,8 @@ Aucune commande ou option non autorisée ne doit être utilisée
 Les fichiers doivent être exécutables et sans erreur de syntaxe
 Les scripts doivent respecter le format exigé par Holberton (Betty linter)
 Les fichiers ne doivent pas contenir de caractères superflus (espaces, retours inutiles)
+
+---
 
 ## Compétences acquises
 
@@ -155,6 +161,8 @@ Manipulation de flux texte (grep, cut, tr, sort, uniq, wc, head, tail, etc.)
 Création de scripts automatisés
 Respect des bonnes pratiques Bash (syntaxe, commentaires, lisibilité)
 
+---
+
 ## Auteur
 
 Gwen Pichot
@@ -163,10 +171,14 @@ Gwen Pichot
 Haute-Savoie, France
 [Profil GitHub](https://github.com/GwenP88)
 
+---
+
 ## Licence
 
 Ce projet est publié sous licence MIT.
 Tu es libre de l’utiliser, le modifier et le redistribuer tant que la licence d’origine est conservée.
+
+---
 
 ## Remerciements
 
