@@ -64,6 +64,8 @@ Chaque fichier contient un script Bash conçu pour répondre à une consigne sp�
 - **13-print_float** : affiche un nombre flottant calculé ou saisi.  
 - **14-decimal_to_hexadecimal** : convertit un nombre décimal en hexadécimal à l’aide d’une expansion arithmétique.
 
+---
+
 ## Instructions d’exécution
 
 Clonez le dépôt :
