@@ -1,48 +1,44 @@
 # Holberton School – Shell
 
-> **Module de formation : Shell, Bash & Commandes Unix**
+> **Training module: Shell, Bash & Unix Commands**
 
-Ce dépôt regroupe l’ensemble des projets et exercices du module **Shell** de la formation **Holberton School**.  
-Il a pour objectif d’apprendre à manipuler efficacement le terminal, à automatiser des tâches, et à comprendre le fonctionnement du système Linux à travers le shell Bash.
+This repository contains all the projects and exercises from the **Shell** module of the **Holberton School** training course.  
+Its aim is to teach students how to use the terminal effectively, automate tasks, and understand how the Linux system works through the Bash shell.
 
----
-
-## Sommaire
-
-- [Présentation](#-présentation)
-- [Objectifs pédagogiques](#-objectifs-pédagogiques)
-- [Arborescence du projet](#-arborescence-du-projet)
-- [Exécution des scripts](#-exécution-des-scripts)
-- [Contraintes techniques](#-contraintes-techniques)
-- [Compétences acquises](#-compétences-acquises)
-- [Auteur](#-auteur)
+- [Presentation](#-presentation)
+- [Educational objectives](#-educational-objectives)
+- [Project structure](#-project-structure)
+- [Script execution](#-script-execution)
+- [Technical constraints](#-technical-constraints)
+- [Skills acquired](#-skills-acquired)
+- [Author](#-author)
 - [Licence](#-licence)
-- [Remerciements](#-remerciements)
+- [Acknowledgements](#-acknowledgements)
 
 ---
 
-## Présentation
+## Introduction
 
-Ce projet fait partie du **tronc commun Holberton School**, et constitue une introduction essentielle à l’environnement Linux.  
-L’objectif est de **comprendre les bases du shell Bash**, d’apprendre à écrire des **scripts simples mais robustes**, et de maîtriser les **commandes fondamentales** de gestion de fichiers, de permissions et de redirections.
+This project is part of the **Holberton School core curriculum** and provides an essential introduction to the Linux environment.  
+The goal is to **understand the basics of the Bash shell**, learn how to write **simple but robust scripts**, and master the **fundamental commands** for file management, permissions, and redirections.
 
-Chaque dossier correspond à une thématique précise, avec des exercices gradués en difficulté.
-
----
-
-## Objectifs pédagogiques
-
-- Découvrir et comprendre le fonctionnement du **shell Unix**
-- Manipuler les **fichiers et répertoires** depuis la ligne de commande
-- Utiliser les **redirections**, les **pipes** et les **filtres**
-- Gérer les **permissions** et les **droits d’accès**
-- Créer et exécuter des **scripts Bash automatisés**
-- Utiliser les **variables**, **expansions** et **commandes intégrées**
-- Respecter les **bonnes pratiques de scripting** et la syntaxe Bash
+Each folder corresponds to a specific topic, with exercises of increasing difficulty.
 
 ---
 
-## Arborescence du projet
+## Learning objectives
+
+- Discover and understand how the **Unix shell** works
+- Manipulate **files and directories** from the command line
+- Use **redirections**, **pipes** and **filters**
+- Manage **permissions** and **access rights**
+- Create and execute **automated Bash scripts**
+- Use **variables**, **expansions** and **built-in commands**
+- Follow **good scripting practices** and Bash syntax
+
+---
+
+## Project Tree Structure
 
 holbertonschool-shell/
 │
@@ -123,65 +119,65 @@ holbertonschool-shell/
 
 ---
 
-## Exécution des scripts
+## Running Scripts
 
-Cloner le dépôt :
+Clone the repository:
 `git clone`
-[Lien vers le depot](git clone https://github.com/GwenP88/holbertonschool-shell.git)
+[Link to repository](git clone https://github.com/GwenP88/holbertonschool-shell.git)
 
-Se déplacer dans le dossier du projet :
+Navigate to the project directory:
 `cd holbertonschool-shell`
 
-Rendre un script exécutable :
-`chmod +x nom_du_script`
+Make a script executable:
+`chmod +x script_name`
 
-Exécuter le script :
-`./nom_du_script`
-Tous les scripts sont testés sur Ubuntu 20.04 LTS avec bash (version 5.x)
-
----
-
-## Contraintes techniques
-
-Interpréteur : #!/bin/bash en première ligne de chaque script
-Aucune commande ou option non autorisée ne doit être utilisée
-Les fichiers doivent être exécutables et sans erreur de syntaxe
-Les scripts doivent respecter le format exigé par Holberton (Betty linter)
-Les fichiers ne doivent pas contenir de caractères superflus (espaces, retours inutiles)
+Run the script:
+`./script_name`
+All scripts are tested on Ubuntu 20.04 LTS with bash (version 5.x)
 
 ---
 
-## Compétences acquises
+## Technical Constraints
 
-Maîtrise des commandes de base (ls, cd, pwd, mv, cp, rm, mkdir, etc.)
-Gestion des droits d’accès (chmod, chown, chgrp)
-Utilisation des variables et expansions
-Redirections d’entrée/sortie et utilisation des pipes
-Manipulation de flux texte (grep, cut, tr, sort, uniq, wc, head, tail, etc.)
-Création de scripts automatisés
-Respect des bonnes pratiques Bash (syntaxe, commentaires, lisibilité)
+Interpreter: #!/bin/bash on the first line of each script
+No unauthorized commands or options may be used
+Files must be executable and free of syntax errors
+Scripts must adhere to the format required by Holberton (Betty linter)
+Files must not contain superfluous characters (spaces, unnecessary returns)
 
 ---
 
-## Auteur
+## Skills Acquired
+
+Mastery of basic commands (ls, cd, pwd, mv, cp, rm, mkdir, etc.)
+Managing access rights (chmod, chown, chgrp)
+Using variables and expansions
+Input/output redirection and using pipes
+Manipulating text streams (grep, cut, tr, sort, uniq, wc, head, tail, etc.)
+Creating automated scripts
+Adherence to Bash best practices (syntax, comments, readability)
+---
+
+## Author
 
 Gwen Pichot
-Étudiante en développement web – [Holberton School](https://www.holbertonschool.fr/)
+Web Development Student – ​​[Holberton School](https://www.holbertonschool.fr/)
 
 Haute-Savoie, France
-[Profil GitHub](https://github.com/GwenP88)
+[GitHub Profile](https://github.com/GwenP88)
 
 ---
 
-## Licence
+## License
 
-Ce projet est publié sous licence MIT.
-Tu es libre de l’utiliser, le modifier et le redistribuer tant que la licence d’origine est conservée.
+This project is published under the MIT license.
+
+You are free to use, modify, and redistribute it as long as the original license is retained.
 
 ---
 
-## Remerciements
+## Acknowledgments
 
-Projet réalisé dans le cadre du programme Holberton School – Foundations
+Project completed as part of the Holberton School – Foundations program
 “The best way to learn coding is by doing.”
 
