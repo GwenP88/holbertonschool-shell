@@ -80,7 +80,6 @@ Adherence to Bash best practices (syntax, comments, readability)
 
 Gwen Pichot
 Web Development Student – ​​[Holberton School](https://www.holbertonschool.fr/)
-
 Haute-Savoie, France
 [GitHub Profile](https://github.com/GwenP88)
 
@@ -89,7 +88,6 @@ Haute-Savoie, France
 ## License
 
 This project is published under the MIT license.
-
 You are free to use, modify, and redistribute it as long as the original license is retained.
 
 ---
