@@ -43,13 +43,10 @@ Each folder corresponds to a specific topic, with exercises of increasing diffic
 Clone the repository:
 `git clone`
 [Link to repository](git clone https://github.com/GwenP88/holbertonschool-shell.git)
-
 Navigate to the project directory:
 `cd holbertonschool-shell`
-
 Make a script executable:
 `chmod +x script_name`
-
 Run the script:
 `./script_name`
 All scripts are tested on Ubuntu 20.04 LTS with bash (version 5.x)
