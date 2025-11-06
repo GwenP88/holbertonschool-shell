@@ -44,7 +44,6 @@ Chaque dossier correspond à une thématique précise, avec des exercices gradu�
 
 ## Arborescence du projet
 
-```bash
 holbertonschool-shell/
 │
 ├── basics/
@@ -121,23 +120,21 @@ holbertonschool-shell/
     ├── 11-directories_permissions
     ├── 12-directory_permissions
     └── 13-change_group
-```
 
 ## Exécution des scripts
 
 Cloner le dépôt :
-  git clone https://github.com/GwenP88/holbertonschool-shell.git
+`git clone`
+[Lien vers le depot](git clone https://github.com/GwenP88/holbertonschool-shell.git)
 
 Se déplacer dans le dossier du projet :
-  cd holbertonschool-shell
+`cd holbertonschool-shell`
 
 Rendre un script exécutable :
-  chmod +x nom_du_script
+`chmod +x nom_du_script`
 
 Exécuter le script :
-  ./nom_du_script
-
-
+`./nom_du_script`
 Tous les scripts sont testés sur Ubuntu 20.04 LTS avec bash (version 5.x)
 
 ## Contraintes techniques
