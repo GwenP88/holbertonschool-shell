@@ -139,7 +139,8 @@ All scripts are tested on Ubuntu 20.04 LTS with bash (version 5.x)
 
 ## Technical Constraints
 
-Interpreter: #!/bin/bash on the first line of each script
+Interpreter: 
+`#!/bin/bash` on the first line of each script
 No unauthorized commands or options may be used
 Files must be executable and free of syntax errors
 Scripts must adhere to the format required by Holberton (Betty linter)
