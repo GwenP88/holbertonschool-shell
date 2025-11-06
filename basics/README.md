@@ -73,7 +73,7 @@ Chaque fichier contient un script Bash répondant à une consigne spécifique du
 
 ## Instructions d’exécution
 
-1. Cloner le dépôt :
+Cloner le dépôt :
 [Lien vers le depot](git clone https://github.com/GwenP88/holbertonschool-shell.git)
 
 Se déplacer dans le dossier :
@@ -96,12 +96,16 @@ Chaque fichier doit être exécutable :
 `chmod +x nom_du_script`
 Le code doit respecter les conventions Holberton et passer le Betty linter.
 
+---
+
 ## Bonnes pratiques
 Tester chaque commande avant de l’intégrer dans un script.
 Vérifier les permissions avant d’exécuter ou de supprimer un fichier.
 Commenter les parties importantes du code pour expliquer l’intention.
 Toujours sauvegarder avant de modifier un fichier système.
 Exécuter les scripts dans un environnement de test avant production.
+
+---
 
 ## Auteur
 
@@ -111,10 +115,14 @@ Gwen Pichot
 Haute-Savoie, France
 [Profil GitHub](https://github.com/GwenP88)
 
+---
+
 ## Licence
 
 Ce projet est publié sous licence MIT.
 Tu es libre de l’utiliser, le modifier et le redistribuer tant que la licence d’origine est conservée.
+
+---
 
 ## Remerciements
 
