@@ -1,32 +1,38 @@
-# Module « Basics » – Shell Scripting
+# Module “Basics” – Shell Scripting
 
-Ce dossier regroupe les premiers exercices du module **Shell** de la formation **Holberton School**.  
-Il constitue l’introduction aux commandes Unix et à la manipulation du système de fichiers via le terminal.
+This folder contains the first exercises of the **Shell** module of the **Holberton School** course.
 
----
-
-## Présentation
-
-Le but de cette série d’exercices est d’apprendre à se repérer et à agir dans un environnement Linux à l’aide du shell Bash.  
-Ces exercices posent les bases nécessaires à la compréhension du fonctionnement du système et à l’écriture de scripts automatisés.
-
-Chaque fichier de ce dossier correspond à un exercice précis demandé par la formation.
+It serves as an introduction to Unix commands and file system manipulation via the terminal.
 
 ---
 
-## Objectifs pédagogiques
+## Overview
 
-À l’issue de ce module, l’étudiant doit être capable de :
+The goal of this series of exercises is to learn how to navigate and interact within a Linux environment using the Bash shell.
 
-- Naviguer dans une arborescence Linux avec les commandes de base (`pwd`, `ls`, `cd`, etc.).
-- Créer, déplacer, copier et supprimer des fichiers et répertoires.
-- Distinguer les différents types de fichiers et comprendre les liens symboliques.
-- Gérer les droits d’accès et comprendre la notion de permissions.
-- Rédiger des scripts Bash simples respectant les conventions Holberton (Betty linter).
+These exercises lay the necessary foundation for understanding how the system works and for writing automated scripts.
+
+Each file in this folder corresponds to a specific exercise required by the course.
 
 ---
 
-## Contenu du dossier
+## Learning Objectives
+
+Upon completion of this module, students should be able to:
+
+- Navigate a Linux directory tree using basic commands (`pwd`, `ls`, `cd`, etc.).
+
+- Create, move, copy, and delete files and directories.
+
+- Distinguish between different file types and understand symbolic links.
+
+- Manage access rights and understand the concept of permissions.
+
+- Write simple Bash scripts that adhere to Holberton conventions (Betty linter).
+
+---
+
+## Folder contents
 
 basics/
 ├── 0-current_working_directory
@@ -45,86 +51,105 @@ basics/
 ├── 13-symbolic_link
 └── 14-copy_html
 
-Chaque fichier contient un script Bash répondant à une consigne spécifique du programme Holberton.
+Each file contains a Bash script that fulfills a specific instruction in the Holberton program.
 
 ---
 
-## Détails des exercices
+## Exercise Details
 
-| Fichier | Description |
+| File | Description |
+
 |----------|--------------|
-| `0-current_working_directory` | Affiche le chemin absolu du répertoire courant. |
-| `1-listit` | Liste le contenu du répertoire courant. |
-| `2-bring_me_home` | Change le répertoire courant vers le répertoire personnel. |
-| `3-listfiles` | Liste les fichiers du répertoire courant au format détaillé. |
-| `4-listmorefiles` | Liste tous les fichiers, y compris les fichiers cachés. |
-| `5-listfilesdigitonly` | Liste les fichiers en affichant les identifiants numériques des utilisateurs et groupes. |
-| `6-firstdirectory` | Crée un répertoire nommé `my_first_directory` dans `/tmp/`. |
-| `7-movethatfile` | Déplace un fichier `betty` de `/tmp/` vers `/tmp/my_first_directory/`. |
-| `8-firstdelete` | Supprime le fichier `betty` situé dans `/tmp/my_first_directory/`. |
-| `9-firstdirdeletion` | Supprime le répertoire `/tmp/my_first_directory/`. |
-| `10-back` | Change le répertoire courant pour le précédent. |
-| `11-lists` | Liste tous les fichiers, y compris ceux des sous-répertoires, dans un format détaillé. |
-| `12-file_type` | Affiche le type du fichier nommé `iamafile`. |
-| `13-symbolic_link` | Crée un lien symbolique `__ls__` pointant vers `/bin/ls`. |
-| `14-copy_html` | Copie tous les fichiers `.html` manquants ou plus récents vers le répertoire parent. |
+| `0-current_working_directory` | Displays the absolute path of the current directory. |
+
+| `1-listit` | Lists the contents of the current directory. |
+
+| `2-bring_me_home` | Changes the current directory to the home directory. |
+
+| `3-listfiles` | Lists the files in the current directory in verbose format. |
+
+| `4-listmorefiles` | Lists all files, including hidden files. |
+
+| `5-listfilesdigitonly` | Lists files, displaying the numeric identifiers of users and groups. |
+
+| `6-firstdirectory` | Creates a directory named `my_first_directory` in `/tmp/`. |
+
+| `7-movethatfile` | Moves a file `betty` from `/tmp/` to `/tmp/my_first_directory/`. |
+
+| `8-firstdelete` | Deletes the file `betty` located in `/tmp/my_first_directory/`. |
+
+| `9-firstdirdeletion` | Deletes the directory `/tmp/my_first_directory/`. |
+
+| `10-back` | Changes the current directory to the previous one. |
+
+| `11-lists` | Lists all files, including those in subdirectories, in a detailed format. |
+
+| `12-file_type` | Displays the type of the file named `iamafile`. |
+
+| `13-symbolic_link` | Creates a symbolic link `__ls__` pointing to `/bin/ls`. |
+
+| `14-copy_html` | Copies all missing or newer `.html` files to the parent directory. |
 
 ---
 
-## Instructions d’exécution
+## Execution Instructions
 
-Cloner le dépôt :
-[Lien vers le depot](git clone https://github.com/GwenP88/holbertonschool-shell.git)
+Clone the repository:
+[Link to repository](git clone https://github.com/GwenP88/holbertonschool-shell.git)
 
-Se déplacer dans le dossier :
+Navigate to the folder:
 `cd holbertonschool-shell/basics`
 
-Rendre un script exécutable :
-`chmod +x nom_du_script`
-  
-Exécuter le script :
-`./nom_du_script`
-Tous les scripts ont été conçus pour être exécutés sur un environnement Ubuntu 20.04 LTS avec bash version 5.x.
+Make a script executable:
+`chmod +x script_name`
 
-Contraintes techniques
-Chaque script doit commencer par le shebang :
+Run the script:
+`./script_name`
+All scripts were designed to run on an Ubuntu 20.04 LTS environment with bash version 5.x.
+
+---
+
+## Technical Constraints
+
+Each script must begin with the shebang:
 `#!/bin/bash`
-Aucune commande non autorisée ne doit être utilisée.
-Les scripts doivent être valides et sans erreur de syntaxe.
+No unauthorized commands should be used. Scripts must be valid and free of syntax errors.
 
-Chaque fichier doit être exécutable :
-`chmod +x nom_du_script`
-Le code doit respecter les conventions Holberton et passer le Betty linter.
+Each file must be executable: `chmod +x script_name`
+The code must adhere to Holberton conventions and pass the Betty linter.
 
 ---
 
-## Bonnes pratiques
-Tester chaque commande avant de l’intégrer dans un script.
-Vérifier les permissions avant d’exécuter ou de supprimer un fichier.
-Commenter les parties importantes du code pour expliquer l’intention.
-Toujours sauvegarder avant de modifier un fichier système.
-Exécuter les scripts dans un environnement de test avant production.
+## Best Practices
+Test each command before integrating it into a script.
+Check permissions before executing or deleting a file.
+Comment important parts of the code to explain the intent.
+Always save before modifying a system file.
+
+Run scripts in a test environment before production.
 
 ---
 
-## Auteur
+## Author
 
 Gwen Pichot
-Étudiante en développement web – [Holberton School](https://www.holbertonschool.fr/)
+Web Development Student – ​​[Holberton School](https://www.holbertonschool.fr/)
 
 Haute-Savoie, France
-[Profil GitHub](https://github.com/GwenP88)
+[GitHub Profile](https://github.com/GwenP88)
 
 ---
 
-## Licence
+## License
 
-Ce projet est publié sous licence MIT.
-Tu es libre de l’utiliser, le modifier et le redistribuer tant que la licence d’origine est conservée.
+This project is released under the MIT license.
+
+You are free to use, modify, and redistribute it as long as the original license remains in effect.
 
 ---
 
-## Remerciements
+## Acknowledgements
 
-Projet réalisé dans le cadre du programme Holberton School – Foundations
+Project completed as part of the Holberton School – Foundations program
+
 “The best way to learn coding is by doing.”
