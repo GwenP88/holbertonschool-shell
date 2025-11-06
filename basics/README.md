@@ -119,7 +119,6 @@ Haute-Savoie, France
 ## License
 
 This project is released under the MIT license.
-
 You are free to use, modify, and redistribute it as long as the original license remains in effect.
 
 ---
@@ -127,5 +126,4 @@ You are free to use, modify, and redistribute it as long as the original license
 ## Acknowledgements
 
 Project completed as part of the Holberton School – Foundations program
-
 “The best way to learn coding is by doing.”
