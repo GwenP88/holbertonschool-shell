@@ -1,3 +1,5 @@
+![Shell Basics Banner](/assets/Holberton.png)
+
 # Shell Init Files, Variables and Expansions – Holberton School Project
 
 ## Introduction
