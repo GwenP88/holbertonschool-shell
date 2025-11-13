@@ -1,3 +1,5 @@
+![Shell Basics Banner](/assets/Holberton.png)
+
 # Shell Permissions – Holberton School Project
 
 ## Introduction
