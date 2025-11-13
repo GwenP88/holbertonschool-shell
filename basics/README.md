@@ -1,3 +1,5 @@
+![Shell Basics Banner](https://cdn.prod.website-files.com/64107f65f30b69371e3d6bfa/644b94071ceca7d51d139d6f_Holberton%20actual%20digital%20school%20(1).png)
+
 # Shell Basics – Holberton School Project
 
 ## Introduction
