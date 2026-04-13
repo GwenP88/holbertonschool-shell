@@ -1,142 +1,305 @@
-![Shell Basics Banner](/assets/Holberton.png)
+# holbertonschool-shell
 
-# Shell Basics – Holberton School Project
-
-## Introduction
-This project marks a key milestone in my journey with Holberton School. Before diving into C language, algorithms, and collaborative projects, I needed to gain a solid understanding of the terminal and understand what really happens ‘under the hood’ when interacting with a machine.  
-Shell Basics was my first real contact with the Unix environment in real conditions: writing my own scripts, automating tasks, navigating the tree structure properly, understanding the machine's responses and becoming autonomous thanks to the documentation.  
-It's a demanding but formative project: it forced me to understand, not just execute. And that's exactly the Holberton approach — learning by doing, experimenting, and correcting my mistakes.
-This README therefore outlines what I learned, the fundamental concepts I integrated, and the details of each exercise completed in this first Shell Basics module.
+> Talking to your computer without clicking anything. Welcome to the shell. 🐚
 
 ---
 
-## Concepts learned
-- **RTFM**: autonomy, proactive research, systematic reading of documentation.
-- **Shebang**: definition of the interpreter to be used to execute a script.  
-- **Shell**: programme that interprets user commands.  
-- **Terminal vs Shell**:  
-  - terminal = input/output interface  
-  - shell = interpreter that executes commands  
-- **Shell prompt**: entry point ready to receive a command.  
-- **History**: recall, re-execution, workflow optimisation.
-- File system manipulation (navigation, creation, deletion, permissions).
-- Management of hidden files, symbolic links, tree structures.
-- Automation using Bash scripts.
+## 📝 Description
+
+This project marks my first steps into the Linux shell — no mouse, no GUI, just me, a blinking cursor, and the quiet confidence of someone who knows what `pwd` means. I learn how to navigate the filesystem, manipulate files and directories, and use the most essential Bash commands like a true terminal wizard (or at least a convincing apprentice).
 
 ---
 
-## Project exercises
+## 🎯 Learning Objectives
 
-### `0-current_working_directory`
-**Instruction:** display the absolute path of the current directory.  
-**Constraint:** none.  
-**What I learned:** understanding the concept of the current directory and the importance of absolute paths.
+By the end of this project, I am able to explain how the shell works to anyone—without secretly checking :contentReference[oaicite:0]{index=0}.
 
+I understand what “RTFM” really means (yes, reading the docs first actually helps) and what a shebang is (no explosions involved, just script execution magic).
 
-### `1-listit`
-**Instruction:** Display the list of contents in the current directory.  
-**Constraint:** None.  
-**What I learned:** Quickly read the structure of a folder using basic commands.
+I know what the shell is, how it differs from the terminal, what the prompt represents, and how to use my command history instead of rewriting the same command again and again.
 
+I navigate the filesystem confidently using `cd`, `pwd`, and `ls`, understand working, root, and home directories, and finally stop mixing up `/` and `~`. Bonus: `cd -` has become my new best friend.
 
-### `2-bring_me_home`
-**Instruction:** move to the home directory.  
-**Constraint:** do not use shell variables.   
-**What I learned:** use robust commands that are independent of environment variables.
+I explore files with `ls`, `less`, and `file`, understand options and arguments, read the `ls -l` format without fear, and get familiar with common system directories.
 
+I also understand symbolic and hard links (and their differences) without breaking everything.
 
-### `3-listfiles`
-**Instruction:** display the content in long format.  
-**Constraint:** none.  
-**What I learned:** read file permissions, owners, and metadata.
-
-
-### `4-listmorefiles`
-**Instruction:** display the content in long format with hidden files.  
-**Constraint:** none.  
-**Expected result:** display including `.` and `..`.  
-**What I learned:** manipulate and display hidden files on the system.
-
-
-### `5-listfilesdigitonly`
-**Instruction:** display content in long format, numerical IDs, including hidden files.  
-**Constraint:** display UID and GID as numbers.   
-**What I learned:** interpret system IDs and not just user names.
-
-
-### `6-firstdirectory`
-**Instruction:** Create `/tmp/my_first_directory`.  
-**Constraint:** None.  
-**What I learned:** Creating directories in system locations.
-
-
-### `7-movethatfile`
-**Instruction:** Move `betty` to `/tmp/my_first_directory`.  
-**Constraint:** File initially located in `/tmp`.  
-**What I learned:** Manipulating and moving files via script.
-
-
-### `8-firstdelete`
-**Instruction:** delete the file `betty`.  
-**Constraint:** file present in the folder.  
-**What I learned:** delete cleanly and verify the absence of a file after an action.
-
-
-### `9-firstdirdeletion`
-**Instruction:** delete the `my_first_directory` folder.  
-**Constraint:** folder must be empty.   
-**What I learned:** differentiate between deleting a file and deleting a folder.
-
-
-### `10-back`
-**Instruction:** return to the previous directory.  
-**Constraint:** none.  
-**What I learned:** how to navigate efficiently through the directory history.
-
-
-### `11-lists`
-**Instruction:** list in long format: current directory, parent, then `/boot`.  
-**Constraint:** be careful with absolute paths.  
-**What I learned:** combine multiple locations in a single command.
-
-
-### `12-file_type`
-**Instruction:** display the file type of `/tmp/iamafile`.  
-**Constraint:** use the appropriate command.  .  
-**What I learned:** analyse the actual nature of a file, regardless of its extension.
-
-
-### `13-symbolic_link`
-**Instruction:** create a symbolic link `__ls__` to `/bin/ls`.  
-**Constraint:** link in the current directory.  
-**What I learned:** create and use symbolic links to system binaries.
-
-
-### `14-copy_html`
-**Instruction:** Copy only the most recent or non-existent `.html` files to the parent directory.  
-**Constraint:** Consider only `.html` files.    
-**What I learned:** Manipulate conditional copying based on date comparison.
-
-
-### `15-lets_move`
-**Instruction:** Move all files beginning with a capital letter to `/tmp/u`.  
-**Constraint:** `/tmp/u` already exists.   
-**What I learned:** How to use patterns (globbing) to filter files.
-
-
-### `16-clean_emacs`
-**Instruction:** delete all files ending with `~`.  
-**Constraint:** none.   
-**What I learned:** automate the cleaning of files generated by editors.
-
-
-### `17-tree`
-**Instruction:** create `welcome/`, `welcome/to/` and `welcome/to/school`.  
-**Constraint:** **maximum 2 lines**, **maximum 2 spaces**.  
-**What I learned:** optimising script writing under strict constraints (syntax and compactness).
+Finally, I manipulate files using `cp`, `mv`, `rm`, and `mkdir`, and master wildcards—because typing full file names is overrated.
 
 ---
 
-## Conclusion
-Thanks to this project, I consolidated the essential skills needed to work in a professional Unix environment: navigation, inspection, file manipulation, automation, rigour, and understanding of how the shell actually works.  
-It is a seemingly simple project, but one that was decisive in shaping my methodology. It was also the moment when I truly realised that I was embarking on a demanding, practical journey designed to push me to think like a developer.
+## 🛠️ Technologies Used
+
+- **Shell**: Bash (the original, the legend)
+- **OS**: Ubuntu 22.04 LTS
+- **Key commands**: `cd`, `ls`, `pwd`, `less`, `file`, `ln`, `cp`, `mv`, `rm`, `mkdir`, `type`, `which`, `help`, `man`
+
+---
+
+## ⚙️ Requirements
+
+- OS: Ubuntu 22.04 LTS
+- Allowed editors: `vi`, `vim`, `emacs`
+- All scripts must be exactly **two lines long** (`$ wc -l file` should print `2`) — yes, two. Not three.
+- All files must end with a new line
+- The first line of all files must be exactly: `#!/bin/bash`
+- A `README.md` file at the root of the repo containing a description of the repository is mandatory
+- A `README.md` file at the root of the project folder describing what each script does is mandatory
+- You are not allowed to use backticks, `&&`, `||` or `;`
+- All scripts must be executable (`chmod u+x FILENAME`)
+
+---
+
+## 🚀 Installation
+
+```bash
+git clone https://github.com/GwenP88/holbertonschool-shell
+cd holbertonschool-shell/basics
+```
+
+---
+
+## ▶️ Usage / Execution
+
+All Bash scripts can be executed in two ways:
+
+### 1. Direct execution
+Make the file executable and run it directly:
+```bash
+chmod u+x filename
+./filename
+```
+
+### 2. Using Bash interpreter
+Run the script with Bash:
+```bash
+bash filename
+```
+
+---
+
+## 📊 Project Progress
+
+<p align="center">
+<img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+<sub>Mandatory tasks completion: 100%</sub>
+</p>
+
+---
+
+## ✨ Features
+
+### Task 0 - Where am I?
+
+- **Status**: Mandatory
+- **Objective**: Print the absolute path name of the current working directory
+- **Constraint**: None
+- **Expected behavior**: Displays the absolute path of the current directory (e.g. `/basics`) — because getting lost on your own machine is not a vibe
+
+**Files**: `0-current_working_directory`
+
+---
+
+### Task 1 - What's in there?
+
+- **Status**: Mandatory
+- **Objective**: Display the contents list of the current directory
+- **Constraint**: None
+- **Expected behavior**: Lists all files and folders in the current directory
+
+**Files**: `1-listit`
+
+---
+
+### Task 2 - There is no place like home
+
+- **Status**: Mandatory
+- **Objective**: Change the working directory to the user's home directory
+- **Constraint**: Not allowed to use any shell variables
+- **Expected behavior**: Moves to the home directory without using `$HOME` — Dorothy would be proud
+
+**Files**: `2-bring_me_home`
+
+---
+
+### Task 3 - The long format
+
+- **Status**: Mandatory
+- **Objective**: Display current directory contents in long format
+- **Constraint**: None
+- **Expected behavior**: Displays permissions, owner, size, and date for each file — more info than you asked for, exactly as requested
+
+**Files**: `3-listfiles`
+
+---
+
+### Task 4 - Hidden files
+
+- **Status**: Mandatory
+- **Objective**: Display current directory contents in long format, including hidden files
+- **Constraint**: None
+- **Expected behavior**: Displays all files, including those starting with `.` — no secrets allowed
+
+**Files**: `4-listmorefiles`
+
+---
+
+### Task 5 - I love numbers
+
+- **Status**: Mandatory
+- **Objective**: Display current directory contents in long format with numeric UIDs/GIDs and hidden files
+- **Constraint**: None
+- **Expected behavior**: Displays user and group IDs as numbers — for those who prefer their data extra raw
+
+**Files**: `5-listfilesdigitonly`
+
+---
+
+### Task 6 - Welcome
+
+- **Status**: Mandatory
+- **Objective**: Create a directory named `my_first_directory` in `/tmp/`
+- **Constraint**: None
+- **Expected behavior**: The directory `/tmp/my_first_directory` exists after execution — it's alive!
+
+**Files**: `6-firstdirectory`
+
+---
+
+### Task 7 - Betty in my first directory
+
+- **Status**: Mandatory
+- **Objective**: Move the file `betty` from `/tmp/` to `/tmp/my_first_directory`
+- **Constraint**: None
+- **Expected behavior**: The file `betty` is relocated to `/tmp/my_first_directory` — moving day, shell edition
+
+**Files**: `7-movethatfile`
+
+---
+
+### Task 8 - Bye bye Betty
+
+- **Status**: Mandatory
+- **Objective**: Delete the file `betty` located in `/tmp/my_first_directory`
+- **Constraint**: None
+- **Expected behavior**: The file `betty` no longer exists — it was fun while it lasted
+
+**Files**: `8-firstdelete`
+
+---
+
+### Task 9 - Bye bye My first directory
+
+- **Status**: Mandatory
+- **Objective**: Delete the directory `my_first_directory` located in `/tmp`
+- **Constraint**: None
+- **Expected behavior**: The directory `/tmp/my_first_directory` no longer exists — what we create, we can also destroy
+
+**Files**: `9-firstdirdeletion`
+
+---
+
+### Task 10 - Back to the future
+
+- **Status**: Mandatory
+- **Objective**: Change the working directory to the previous one
+- **Constraint**: None
+- **Expected behavior**: Moves back to the previously visited directory — no DeLorean required
+
+**Files**: `10-back`
+
+---
+
+### Task 11 - Lists
+
+- **Status**: Mandatory
+- **Objective**: List all files (including hidden ones) in the current directory, the parent directory, and `/boot`, in long format
+- **Constraint**: Be careful with the `/`
+- **Expected behavior**: Displays the contents of all three directories in the specified order — a grand tour
+
+**Files**: `11-lists`
+
+---
+
+### Task 12 - File type
+
+- **Status**: Mandatory
+- **Objective**: Print the type of the file named `iamafile` located in `/tmp`
+- **Constraint**: None
+- **Expected behavior**: Displays the file type — because `iamafile` deserves to know what it is
+
+**Files**: `12-file_type`
+
+---
+
+### Task 13 - We are symbols, and inhabit symbols
+
+- **Status**: Mandatory
+- **Objective**: Create a symbolic link to `/bin/ls` named `__ls__` in the current working directory
+- **Constraint**: None
+- **Expected behavior**: A symbolic link `__ls__ -> /bin/ls` appears — the philosophical one of the bunch
+
+**Files**: `13-symbolic_link`
+
+---
+
+### Task 14 - Copy HTML files
+
+- **Status**: Mandatory
+- **Objective**: Copy all `.html` files from the current directory to the parent directory, only if they don't already exist there or are newer
+- **Constraint**: Only files with the `.html` extension are concerned
+- **Expected behavior**: HTML files are conditionally copied — smart copy, no unnecessary duplicates
+
+**Files**: `14-copy_html`
+
+---
+
+### Task 15 - Let's move
+
+- **Status**: Mandatory
+- **Objective**: Move all files beginning with an uppercase letter to `/tmp/u`
+- **Constraint**: The directory `/tmp/u` will exist when the script is run
+- **Expected behavior**: Only files starting with an uppercase letter are moved — the VIPs get their own room
+
+**Files**: `15-lets_move`
+
+---
+
+### Task 16 - Clean Emacs
+
+- **Status**: Mandatory
+- **Objective**: Delete all files in the current working directory that end with the character `~`
+- **Constraint**: None
+- **Expected behavior**: Emacs backup files (e.g. `main.c~`) are deleted — keeping things tidy, one tilde at a time
+
+**Files**: `16-clean_emacs`
+
+---
+
+### Task 17 - Tree
+
+- **Status**: Mandatory
+- **Objective**: Create the directories `welcome/`, `welcome/to/` and `welcome/to/school` in the current directory
+- **Constraint**: Only two spaces (and lines) are allowed in the script — brevity is the soul of shell
+- **Expected behavior**: The directory tree `welcome/to/school` is created in a single command
+
+**Files**: `17-tree`
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+- Project completed as part of the **Holberton School** curriculum 🎓  
+- Big thanks to my peers and reviewers for their feedback — and special shoutout to the `man` pages, the real MVPs working quietly behind the scenes 🧙‍♂️
+
+---
+
+## 👤 Author
+
+**Gwenaelle PICHOT**
+- Student at Holberton School
+- Track: `holbertonschool-shell`
+- Project: `basics`
