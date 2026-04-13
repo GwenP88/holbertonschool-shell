@@ -1,197 +1,301 @@
-![Shell Basics Banner](/assets/Holberton.png)
+# init_files_variables_and_expansions
 
-# Shell Init Files, Variables and Expansions – Holberton School Project
-
-## Introduction
-In this project, I moved from simply “using” the shell to actually understanding how it starts, how it remembers things, and how it interprets what I type.  
-Instead of just running commands, I worked with initialization files, environment and local variables, expansions, arithmetic, and aliases. That’s where the shell starts to feel programmable instead of just interactive.  
-This project forced me to read man pages carefully, reason about the difference between what is local to a shell session and what is inherited by child processes, and understand how a simple line like `ls -l *.txt` is parsed and expanded before it is executed.  
-This README summarizes the main concepts I learned and how each task contributed to that learning.
+> Variables, aliases, and expansions — because a shell without them is just a very expensive notepad.
 
 ---
 
-## Concepts Learned
+## 📝 Description
 
-### Shell Initialization Files
-- Role of `/etc/profile` and `/etc/profile.d/` for system-wide initialization.
-- Role of `~/.bashrc` for user-specific interactive shell configuration.
-- When each file is read (login vs non-login, interactive vs non-interactive).
-
-### Variables and Parameters
-- Difference between **local** (shell-only) variables and **global** (environment) variables.
-- What **reserved variables** are and how they affect shell behavior.
-- Creation, update and deletion of variables with simple assignments and `unset`.
-- Roles of `HOME`, `PATH`, `PS1` in everyday shell usage.
-- Meaning of **special parameters** (e.g. `$?`, `$#`, `$0`, `$1`, etc.).
-- Use of `$?` to read the exit status of the last command.
-
-### Expansions and Substitution
-- What “expansion” means: how the shell transforms a command line before execution.
-- Differences between **single quotes** and **double quotes** and when to use each.
-- Command substitution with `$(...)` and backticks `` `...` ``.
-
-### Shell Arithmetic
-- Using shell arithmetic expansion to perform integer operations.
-- Converting numbers between bases (binary, decimal, hexadecimal, and custom encodings).
-- Formatting numeric output, including floating point formatting.
-
-### Aliases
-- Creating aliases to customize commands.
-- Listing existing aliases.
-- Temporarily bypassing an alias (e.g. using backslash before the command).
+This project is part of my shell scripting curriculum at Holberton School. It dives deep into how the shell initializes, manages variables, and performs expansions. Through a series of two-line Bash scripts, I explore environment and local variables, shell arithmetic, aliases, quoting rules, and how the shell interprets and expands what I type before actually running it. Think of it as learning the secret language the terminal speaks to itself before doing anything useful.
 
 ---
 
-## Tasks
+## 🎯 Learning Objectives
 
-### `0-alias`
-**Instruction:** Create an alias named `ls` with value `rm -f *`.  
-**Constraints:** Alias must override `ls` until explicitly bypassed.  
-**What I learned:** How aliases can completely change the behavior of common commands and how to bypass them with `\command`.
+At the end of this project, I am able to explain what happens when I type `$ ls -l *.txt` in a shell and how the shell processes that command before executing it. I understand the purpose of the `/etc/profile` file and the `/etc/profile.d` directory, as well as the role of the `~/.bashrc` file in shell initialization. I know the difference between a local and a global variable, what reserved variables are, and how to create, update, and delete shell variables. I can explain the roles of the reserved variables `HOME`, `PATH`, and `PS1`, and I understand what special parameters are, including `$?` and what it tells me about the last executed command. I am able to use expansions effectively, understand the difference between single and double quotes, and perform command substitution using both `$()` and backticks. I know how to perform arithmetic operations directly in the shell. I can create, list, and temporarily disable aliases. Finally, I know how to execute commands from a file in the current shell using `.` or `source`.
 
 ---
 
-### `1-hello_you`
-**Instruction:** Print `hello user` where `user` is the current Linux username.  
-**Constraints:** The message must adapt to the current user.  
-**What I learned:** How to use variable expansion to access the current user and build dynamic output.
+## 🛠️ Technologies Used
+
+All scripts in this project are written in **Bash** and run on **Ubuntu 20.04 LTS**. The key built-ins and commands covered include `printenv`, `set`, `unset`, `export`, `alias`, `unalias`, `.` (source), and `printf`. No external libraries or dependencies are required — just a shell and a curious mind.
 
 ---
 
-### `2-path`
-**Instruction:** Add `/action` to the `PATH` as the **last** directory.  
-**Constraints:** Append to the existing `PATH`, do not overwrite it.  
-**What I learned:** Modifying `PATH` safely so that new locations are searched after the standard directories.
+## ⚙️ Requirements
+
+- **OS:** Ubuntu 20.04 LTS
+- **Allowed editors:** `vi`, `vim`, `emacs`
+- All scripts must be exactly **two lines long** (`wc -l file` must print `2`)
+- All files must end with a **new line**
+- The first line of every script must be exactly `#!/bin/bash`
+- All files must be **executable**
+- The use of `&&`, `||`, and `;` is **not allowed**
+- The use of `bc`, `sed`, and `awk` is **not allowed**
+- A `README.md` at the root of the project folder is mandatory
 
 ---
 
-### `3-paths`
-**Instruction:** Count the number of directories in `PATH`.  
-**Constraints:** Must handle empty entries correctly.  
-**What I learned:** How to work with colon-separated lists and use shell tools to count items.
+## 🚀 Installation
+
+```bash
+git clone https://github.com/GwenP88/holbertonschool-shell.git
+cd holbertonschool-shell/init_files_variables_and_expansions
+```
 
 ---
 
-### `4-global_variables`
-**Instruction:** List all **environment** variables.  
-**Constraints:** Use the appropriate command(s) to display global variables.  
-**What I learned:** The difference between environment variables and other shell variables, and how to inspect what the shell exports to child processes.
+## ▶️ Usage / Execution
+
+Make a script executable and run it directly:
+
+```bash
+chmod +x ./0-alias
+./0-alias
+```
+
+Some scripts must be **sourced** to take effect in the current shell (especially those modifying variables or aliases):
+
+```bash
+source ./0-alias
+# or equivalently:
+. ./0-alias
+```
 
 ---
 
-### `5-local_variables`
-**Instruction:** List all **local variables**, environment variables, and functions.  
-**Constraints:** Must show more than just the exported environment.  
-**What I learned:** How to see the complete state of the shell: variables, environment, and defined functions.
+## 📊 Project Progress
+
+<p align="center">
+<img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+<sub>Mandatory tasks completion: 100% --- Advanced tasks completion: 100%</sub>
+</p>
 
 ---
 
-### `6-create_local_variable`
-**Instruction:** Create a new **local** variable `BEST` with value `School`.  
-**Constraints:** Variable should remain local to the current shell.  
-**What I learned:** Defining variables that are not exported and thus not visible to child processes.
+## ✨ Features
+
+### Task 0 - \<o\>
+
+- Mandatory
+- Create an alias named `ls` with the value `rm -f *`
+- Must use the `alias` built-in
+- After sourcing, typing `ls` deletes all files in the current directory
+
+**Files:** `0-alias`
 
 ---
 
-### `7-create_global_variable`
-**Instruction:** Create a new **global** variable `BEST` with value `School`.  
-**Constraints:** Must be exported so that child processes see it.  
-**What I learned:** How to promote a variable from local to environment and why that matters for scripts and subprocesses.
+### Task 1 - Hello you
+
+- Mandatory
+- Print `hello user`, where `user` is the current Linux user
+- Must use the `USER` environment variable
+- Outputs `hello <current_username>` followed by a new line
+
+**Files:** `1-hello_you`
 
 ---
 
-### `8-true_knowledge`
-**Instruction:** Print the result of `128 + TRUEKNOWLEDGE` followed by a newline.  
-**Constraints:** `TRUEKNOWLEDGE` is provided as an environment variable.  
-**What I learned:** Using shell arithmetic expansion with environment variables.
+### Task 2 - The path to success is to take massive, determined action
+
+- Mandatory
+- Add `/action` to the end of the `PATH` variable
+- Must not overwrite the existing `PATH`
+- After sourcing, `/action` appears as the last directory in `$PATH`
+
+**Files:** `2-path`
 
 ---
 
-### `9-divide_and_rule`
-**Instruction:** Print `POWER / DIVIDE` followed by a newline.  
-**Constraints:** `POWER` and `DIVIDE` are environment variables.  
-**What I learned:** Performing integer division in the shell and handling values coming from the environment.
+### Task 3 - If the path be beautiful, let us not ask where it leads
+
+- Mandatory
+- Count and print the number of directories in the `PATH`
+- Must handle edge cases such as empty entries
+- Outputs a single integer representing the number of directories in `$PATH`
+
+**Files:** `3-paths`
 
 ---
 
-### `10-love_exponent_breath`
-**Instruction:** Print the result of `BREATH` to the power `LOVE`.  
-**Constraints:** Both are environment variables; result must end with a newline.  
-**What I learned:** Using shell arithmetic for exponentiation and chaining environment variables inside arithmetic expressions.
+### Task 4 - Global variables
+
+- Mandatory
+- List all environment variables
+- Must use `printenv`
+- Outputs all currently exported environment variables
+
+**Files:** `4-global_variables`
 
 ---
 
-### `11-binary_to_decimal`
-**Instruction:** Convert a binary number (stored in `BINARY`) to decimal.  
-**Constraints:** Input in base 2; output in base 10.  
-**What I learned:** Leveraging shell arithmetic with base prefixes to convert between number systems.
+### Task 5 - Local variables
+
+- Mandatory
+- List all local variables, environment variables, and functions
+- Must use `set`
+- Outputs a comprehensive list of all shell variables and functions
+
+**Files:** `5-local_variables`
 
 ---
 
-### `12-combinations`
-**Instruction:** Print all two-letter combinations from `aa` to `zz`, except `oo`.  
-**Constraints:**  
-- Lowercase letters only  
-- One combination per line  
-- Alphabetical order  
-- File size limited to 64 characters  
-**What I learned:** Using expansions and loops/brace expansion to generate combinations efficiently under strict size constraints.
+### Task 6 - Local variable
+
+- Mandatory
+- Create a new local variable named `BEST` with the value `School`
+- Must not export the variable
+- The variable exists only in the current shell session and is not visible to child processes
+
+**Files:** `6-create_local_variable`
 
 ---
 
-### `13-print_float`
-**Instruction:** Print the value of `NUM` with two decimal places.  
-**Constraints:** `NUM` may already contain decimals; output must be rounded/trimmed to 2 decimals.  
-**What I learned:** Formatting numeric output to a fixed number of decimal places from within the shell.
+### Task 7 - Global variable
+
+- Mandatory
+- Create a new global (exported) variable named `BEST` with the value `School`
+- Must use `export`
+- The variable is accessible to child processes
+
+**Files:** `7-create_global_variable`
 
 ---
 
-### `14-decimal_to_hexadecimal`
-**Instruction:** Convert a decimal number (stored in `DECIMAL`) to hexadecimal (base 16).  
-**Constraints:** Output must be the base-16 representation followed by a newline.  
-**What I learned:** Converting from base 10 to base 16 using shell arithmetic and understanding how different bases are represented.
+### Task 8 - Every addition to true knowledge is an addition to human power
+
+- Mandatory
+- Print the result of adding 128 to the value stored in the environment variable `TRUEKNOWLEDGE`
+- Must perform shell arithmetic
+- Outputs the integer result followed by a new line
+
+**Files:** `8-true_knowledge`
 
 ---
 
-### `15-what_happens_when_you_type_ls_*.c` (blog post – advanced)
-**Instruction:** Write a blog post explaining, step by step, what happens when you type `ls *.c` and press Enter.  
-**Constraints:**  
-- Written in English  
-- At least one picture at the top  
-- Published on Medium or LinkedIn  
-- Shared on LinkedIn  
-**URL:**  
-`https://medium.com/@gpichot_63497/what-happens-when-you-type-ls-c-in-the-shell-b4003714ab70`  
-**What I learned:** How to decompose a simple shell command into parsing, expansion, path lookup, process creation, and execution—and how to explain these internal steps clearly to others.
+### Task 9 - Divide and rule
+
+- Mandatory
+- Print the result of dividing the environment variable `POWER` by `DIVIDE`
+- Both variables are set as environment variables before running the script
+- Outputs the integer result of the division followed by a new line
+
+**Files:** `9-divide_and_rule`
 
 ---
 
-### `15-rot13` (listed as task 16)
-**Instruction:** Encode and decode text using **rot13**.  
-**Constraints:** Assume ASCII text from standard input.  
-**What I learned:** Using character mappings and shell tools to build a simple substitution cipher.
+### Task 10 - Love is anterior to life, posterior to death, initial of creation, and the exponent of breath
+
+- Mandatory
+- Print the result of raising `BREATH` to the power of `LOVE`
+- Both `BREATH` and `LOVE` are environment variables
+- Outputs the result followed by a new line
+
+**Files:** `10-love_exponent_breath`
 
 ---
 
-### `16-odd`
-**Instruction:** Print every other line from standard input, starting with the first line.  
-**Constraints:** The script must act as a filter in a pipeline.  
-**What I learned:** Combining text-processing tools and line numbering/selection to sample input lines.
+### Task 11 - There are 10 types of people in the world -- Those who understand binary, and those who don't
+
+- Mandatory
+- Convert a number from base 2 (stored in `$BINARY`) to base 10 and print it
+- Must use shell arithmetic or built-in base conversion
+- Outputs the decimal value followed by a new line
+
+**Files:** `11-binary_to_decimal`
 
 ---
 
-### `17-water_and_stir`
-**Instruction:** Add the two numbers stored in `WATER` and `STIR`, where each number is expressed in a custom base (`water` and `stir`), and print the result in base `bestchol`.  
-**Constraints:**  
-- `WATER` and `STIR` use custom digit alphabets  
-- Result must be encoded in another custom alphabet  
-**What I learned:** Thinking about numbers abstractly as strings in arbitrary bases and using the shell and its tools to translate between these encodings.
+### Task 12 - Combination
+
+- Mandatory
+- Print all possible combinations of two lowercase letters, except `oo`, in alphabetical order
+- Script file must contain a maximum of 64 characters
+- Outputs 675 combinations, one per line, sorted alphabetically starting with `aa`
+
+**Files:** `12-combinations`
 
 ---
 
-## Conclusion
-This project gave me a much deeper understanding of how the shell actually works under the surface. I learned how initialization files configure my environment, how variables move (or don’t move) from one process to another, and how expansions and arithmetic are evaluated before a command is even executed.  
-I also realized how powerful small features like aliases, command substitution, and arithmetic expansion become when they are combined. They allow me to customize my shell, automate common tasks, and reason precisely about what happens when I type a command like `ls -l *.txt`.  
-Overall, this project helped me move from “typing commands” to actually **controlling** the shell environment, which is essential for the rest of the Holberton curriculum and for real-world development and DevOps work.
+### Task 13 - Floats
 
+- Mandatory
+- Print the number stored in `$NUM` with exactly two decimal places
+- Must use `printf`
+- Outputs the formatted float followed by a new line
 
+**Files:** `13-print_float`
+
+---
+
+### Task 14 - Decimal to Hexadecimal
+
+- Mandatory
+- Convert a number from base 10 (stored in `$DECIMAL`) to base 16 and print it
+- Must use shell arithmetic or built-in base conversion
+- Outputs the hexadecimal value followed by a new line
+
+**Files:** `14-decimal_to_hexadecimal`
+
+---
+
+### Task 15 - What happens when you type ls \*.c
+
+- Advanced
+- Write a blog post explaining step by step what happens when typing `ls *.c` and hitting Enter
+- Must include at least one image; must be published on Medium or LinkedIn and shared on LinkedIn; must be written in English
+- A clear, beginner-friendly article explaining shell expansion, globbing, and command execution
+
+**Files:** *(blog post URL)*
+
+---
+
+### Task 16 - Everyone is a proponent of strong encryption
+
+- Advanced
+- Encode and decode text using ROT13 encryption on ASCII input
+- Must use `tr`
+- Outputs the ROT13-encoded version of the input
+
+**Files:** `15-rot13`
+
+---
+
+### Task 17 - The eggs of the brood need to be an odd number
+
+- Advanced
+- Print every other line from the input, starting with the first line
+- Must use shell built-ins or filters
+- Outputs lines 1, 3, 5, … of the input
+
+**Files:** `16-odd`
+
+---
+
+### Task 18 - I'm an instant star. Just add water and stir.
+
+- Advanced
+- Add two numbers stored in `$WATER` (base `water`) and `$STIR` (base `stir.`) and print the result in base `bestchol`
+- Must handle custom base encoding/decoding
+- Outputs the sum in base `bestchol`
+
+**Files:** `17-water_and_stir`
+
+---
+
+## 🤝 Contributions & Acknowledgements
+
+Huge thanks to the Holberton School team for designing tasks that make you think twice about what a "simple" two-line script can actually do. Special mention to whoever invented shell arithmetic — you are the reason I no longer reach for a calculator.
+
+---
+
+## 👤 Author
+
+**Gwenaelle PICHOT**
+- Student at Holberton School
+- Track: `holbertonschool-shell`
+- Project: `init_files_variables_and_expansions`
