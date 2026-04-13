@@ -1,146 +1,266 @@
-![Shell Basics Banner](/assets/Holberton.png)
+# permissions
 
-# Shell Permissions – Holberton School Project
-
-## Introduction
-This project marked a real shift in my understanding of how a Unix system works. After learning how to navigate through directories and write basic scripts in the “Shell Basics” module, I finally had to deal with one of the most sensitive and fundamental aspects of Linux: permissions, ownership, groups, and identity management.  
-This is also when I realized how much the security and structure of a system rely on those mechanisms. There is no way to progress in C, DevOps, or system administration without mastering these foundations.  
-Working on this module pushed me to read man pages carefully, experiment, break things, fix them, and—most importantly—understand why an action succeeds or fails depending on the active user.  
-This README summarizes the key concepts I learned and what each exercise taught me.
+> Learning Linux permissions the hard way — one command, one mistake, one “ah okay I get it now” at a time.
 
 ---
 
-## Concepts Learned
-- Understanding **Linux permissions** (rwx, numeric mode, symbolic mode).  
-- Key commands:
-  - `chmod`: change permissions  
-  - `sudo`: run commands with elevated privileges  
-  - `su`: switch user  
-  - `chown`: change file owner  
-  - `chgrp`: change file group  
-- How to represent permissions (owner / group / others) with digits from 0 to 7.  
-- How to modify permissions, owners, and groups.  
-- Why a normal user **cannot** change file ownership.  
-- How to run commands as **root** safely.  
-- How to change user ID or become superuser.  
-- How to create users and groups.  
-- How to display real and effective UIDs and GIDs.  
-- How to handle symbolic links safely.  
-- How conditional ownership changes work.  
+## 📝 Description
+In this project, I dive into Linux file permissions and user management using Bash. I learn how to control who can read, write, or execute files, and how to manage ownership and groups. This is where I start understanding that Linux is not just about commands — it’s about control (and sometimes frustration).
 
 ---
 
-## Exercises
+## 🎯 Learning Objectives
+By the end of this project, I am able to explain how Linux permissions work without opening :contentReference[oaicite:0]{index=0} in panic mode.
 
-### `0-iam_betty`
-**Instruction:** Switch the current user to *betty*.  
-**Constraint:** Exactly **8 characters** (plus newline).  
-**What I learned:** Understanding how to switch users and the difference between real and effective user identity.
+I understand what commands like `chmod`, `chown`, `chgrp`, `sudo`, and `su` actually do, and more importantly, when and why to use them (instead of randomly trying things and hoping for the best).
 
+I know how permissions are structured in Linux, how to read them, and how to convert them into numeric form without feeling personally attacked by octal notation.
 
-### `1-who_am_i`
-**Instruction:** Print the effective username of the current user.  
-**Constraint:** None.  
-**What I learned:** Identifying the effective user that executes a command.
+I am able to change permissions, ownership, and groups of files, and I finally understand why a normal user can’t just `chown` everything (sad, but fair).
 
+I can run commands with root privileges, switch users, and understand what it really means to become the superuser (spoiler: with great power comes great responsibility).
 
-### `2-groups`
-**Instruction:** Print all groups the current user belongs to.  
-**Constraint:** None.  
-**What I learned:** How group membership impacts file permissions.
+I also know how to create users and groups, check user IDs, display group memberships, and figure out who I actually am in the system (`whoami` — existential crisis avoided).
 
-
-### `3-new_owner`
-**Instruction:** Change the owner of *hello* to betty.  
-**Constraint:** Requires elevated privileges.  
-**What I learned:** How `chown` works and why only root can change ownership.
-
-
-### `4-empty`
-**Instruction:** Create an empty file named *hello*.  
-**Constraint:** None.  
-**What I learned:** Creating files without editors and understanding default permissions.
-
-
-### `5-execute`
-**Instruction:** Add execute permission to the owner of *hello*.  
-**Constraint:** File must exist in the working directory.  
-**What I learned:** Applying targeted permission changes with `chmod`.
-
-
-### `6-multiple_permissions`
-**Instruction:** Add execute permission to owner and group, and read permission to others.  
-**Constraint:** None.  
-**What I learned:** Combining multiple symbolic permission rules.
-
-
-### `7-everybody`
-**Instruction:** Add execute permission for owner, group, and others.  
-**Constraint:** No commas allowed.  
-**What I learned:** Modifying permissions symbolically with concise syntax.
-
-
-### `8-James_Bond`
-**Instruction:** Set permissions:  
-- Owner: none  
-- Group: none  
-- Others: all permissions  
-**Constraint:** No commas allowed.  
-**What I learned:** How to set strict permission patterns using symbolic mode.
-
-
-### `9-John_Doe`
-**Instruction:** Set the file mode of *hello* to `rwxr-x-wx`.  
-**Constraint:** No commas allowed.  
-**What I learned:** Translating between symbolic and numeric permission formats.
-
-
-### `10-mirror_permissions`
-**Instruction:** Set *hello*’s permissions to match those of *olleh*.  
-**Constraint:** Must work for any permission mode.  
-**What I learned:** Copying permissions dynamically from one file to another.
-
-
-### `11-directories_permissions`
-**Instruction:** Add execute permission to **all subdirectories**, without changing files.  
-**Constraint:** Only directories should be affected.  
-**What I learned:** Distinguishing between file types when applying permissions in bulk.
-
-
-### `12-directory_permissions`
-**Instruction:** Create `my_dir` with permissions **751**.  
-**Constraint:** Must be created in the working directory.  
-**What I learned:** Setting permission modes directly during directory creation.
-
-
-### `13-change_group`
-**Instruction:** Change the group owner of *hello* to *school*.  
-**Constraint:** Requires root privileges.  
-**What I learned:** Manipulating the group ownership of individual files.
-
-
-### `14-change_owner_and_group`
-**Instruction:** Change both owner and group to *vincent* and *staff* for every file and directory.  
-**Constraint:** Must run as root.  
-**What I learned:** Applying ownership changes recursively to multiple items.
-
-
-### `15-symbolic_link_permissions`
-**Instruction:** Change the owner and group of *_hello* (a symbolic link).  
-**Constraint:** Must modify the **link**, not the target.  
-**What I learned:** Handling symbolic link metadata safely using proper flags.
-
-
-### `16-if_only`
-**Instruction:** Change the owner of *hello* to *vincent* only if its current owner is *guillaume*.  
-**Constraint:** Conditional ownership change.  
-**What I learned:** Implementing safe system operations based on file metadata checks.
 
 ---
 
-## Conclusion
-This project pushed me to develop a deeper and more structured understanding of Linux systems. Permissions are often seen as a small detail, but they control everything: access, security, processes, and even the behavior of software.  
-I learned to reason like a system administrator: check identities, validate permissions, avoid unsafe operations, and understand why each action succeeds or fails.  
-It’s a demanding module, but incredibly valuable for all future work in C programming, DevOps, security, and system-level development.  
-I now feel more confident navigating Unix at a professional level and understanding the implications of every command I execute.
+## 🛠️ Technologies Used
+This project is built using Bash scripting on Ubuntu Linux. No fancy frameworks, just the terminal, core commands, and a lot of trial and error.
 
+
+---
+
+## ⚙️ Requirements
+- OS: Ubuntu 22.04 LTS  
+- Allowed editors: vi, vim, emacs  
+- All scripts must be exactly two lines long  
+- All files must end with a new line  
+- The first line of all files must be exactly: `#!/bin/bash`  
+- A README.md file at the root of the project is mandatory  
+- You are not allowed to use backticks, `&&`, `||` or `;`  
+- All files must be executable  
+- Some tasks must be executed in the sandbox environment
+
+---
+
+## 🚀 Installation
+```bash
+git clone https://github.com/GwenP88/holbertonschool-shell.git
+cd holbertonschool-shell/permissions
+```
+
+---
+
+## ▶️ Usage / Execution
+All Python scripts can be executed in two ways:
+
+### 1. Direct execution
+Make the file executable and run it directly:
+```bash
+chmod u+x filename
+./filename
+```
+
+### 2. Using Bash interpreter
+Run the script with Bash:
+```bash
+bash filename
+```
+
+---
+
+## 📊 Project Progress
+<p align="center">
+<img src="assets/progress_barre_100.gif" alt="Mandatory tasks progress" width="80%">
+</p>
+
+<p align="center">
+<sub>Mandatory tasks completion: 100%</sub>
+</p>
+
+---
+
+## ✨ Features
+
+### 0 - My name is Betty
+- Mandatory task  
+- Switch the current user to `betty`  
+- Use exactly 8 characters for the command  
+- The script changes the current user successfully  
+
+**Files**: `0-iam_betty`
+
+---
+
+### 1 - Who am I
+- Mandatory task  
+- Print the effective username of the current user  
+- No specific constraints  
+- Displays the correct username  
+
+**Files**: `1-who_am_i`
+
+---
+
+### 2 - Groups
+- Mandatory task  
+- Display all groups the current user belongs to  
+- Output depends on the user  
+- Shows all associated groups  
+
+**Files**: `2-groups`
+
+---
+
+### 3 - New owner
+- Mandatory task  
+- Change the owner of file `hello` to `betty`  
+- Must be executed with appropriate permissions  
+- Ownership of the file is updated  
+
+**Files**: `3-new_owner`
+
+---
+
+### 4 - Empty!
+- Mandatory task  
+- Create an empty file named `hello`  
+- No constraints  
+- File is created successfully  
+
+**Files**: `4-empty`
+
+---
+
+### 5 - Execute
+- Mandatory task  
+- Add execute permission to the owner of `hello`  
+- File must exist in working directory  
+- Owner can execute the file  
+
+**Files**: `5-execute`
+
+---
+
+### 6 - Multiple permissions
+- Mandatory task  
+- Add execute to owner and group, read to others  
+- Must modify permissions correctly  
+- Permissions are updated as expected  
+
+**Files**: `6-multiple_permissions`
+
+---
+
+### 7 - Everybody!
+- Mandatory task  
+- Add execute permission to everyone  
+- No commas allowed  
+- All users can execute the file  
+
+**Files**: `7-everybody`
+
+---
+
+### 8 - James Bond
+- Mandatory task  
+- Set permissions: owner/group none, others all  
+- No commas allowed  
+- Only others have full permissions  
+
+**Files**: `8-James_Bond`
+
+---
+
+### 9 - John Doe
+- Mandatory task  
+- Set specific permission pattern  
+- No commas allowed  
+- Permissions match expected output  
+
+**Files**: `9-John_Doe`
+
+---
+
+### 10 - Look in the mirror
+- Mandatory task  
+- Set `hello` permissions same as `olleh`  
+- Must work for any permission value  
+- Permissions are mirrored correctly  
+
+**Files**: `10-mirror_permissions`
+
+---
+
+### 11 - Directories
+- Mandatory task  
+- Add execute permission to directories only  
+- Must not affect regular files  
+- Only directories are updated  
+
+**Files**: `11-directories_permissions`
+
+---
+
+### 12 - More directories
+- Mandatory task  
+- Create `my_dir` with permission 751  
+- Must set correct permissions at creation  
+- Directory is created with expected mode  
+
+**Files**: `12-directory_permissions`
+
+---
+
+### 13 - Change group
+- Mandatory task  
+- Change group owner of `hello` to `school`  
+- Requires proper privileges  
+- Group ownership is updated  
+
+**Files**: `13-change_group`
+
+---
+
+### 14 - Owner and group
+- Mandatory task  
+- Change owner to `vincent` and group to `staff`  
+- Apply to all files and directories  
+- Ownership is updated everywhere  
+
+**Files**: `14-change_owner_and_group`
+
+---
+
+### 15 - Symbolic links
+- Mandatory task  
+- Change owner and group of a symbolic link  
+- Must target the link itself  
+- Link ownership is updated correctly  
+
+**Files**: `15-symbolic_link_permissions`
+
+---
+
+### 16 - If only
+- Mandatory task  
+- Change owner of `hello` only if owned by `guillaume`  
+- Must check condition before applying  
+- Ownership changes only when condition is met  
+
+**Files**: `16-if_only`
+
+---
+
+## 🤝 Contributions & Acknowledgements
+- Thanks to my peers and reviewers for their feedback
+- Special thanks to the man pages — confusing at first, but always right
+
+---
+
+## 👤 Author
+**Gwenaelle PICHOT**
+- Student at Holberton School
+- Track: holbertonschool-shell
+- Project: permissions
