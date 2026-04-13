@@ -1,3 +1,5 @@
+![Shell Basics Banner](/assets/Holberton.png)
+
 # Shell I/O Redirections and Filters – Holberton School Project
 
 ## Introduction
