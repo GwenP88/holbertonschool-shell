@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.jpeg" alt="holbertonschool-shell Banner" width="800">
+  <img src="./assets/banner.jpeg" alt="holbertonschool-shell Banner" width="500">
 </p>
 
 # permissions
