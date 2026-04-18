@@ -1,4 +1,6 @@
-![holbertonschool-shell Banner](assets/banner.jpg)
+<p align="center">
+  <img src="./assets/banner.jpg" alt="holbertonschool-shell Banner">
+</p>
 
 # holbertonschool-shell
 
