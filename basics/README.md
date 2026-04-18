@@ -1,5 +1,5 @@
 <p align="center>
-    <img src="assets/banner.jpg" alt="banner">
+    <img src="assets/banner.jpg" alt="banner"/>
 </p>
 
 # holbertonschool-shell
