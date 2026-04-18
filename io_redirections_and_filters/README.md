@@ -1,3 +1,5 @@
+![holbertonschool-shell Banner](assets/banner.jpeg)
+
 # io_redirections_and_filters
 
 > Because sometimes, the terminal needs a good plumber — and that plumber is me.

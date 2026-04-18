@@ -1,3 +1,5 @@
+![holbertonschool-shell Banner](assets/banner.jpg)
+
 # holbertonschool-shell
 
 > Talking to your computer without clicking anything. Welcome to the shell. 🐚

@@ -1,3 +1,5 @@
+![holbertonschool-shell Banner](assets/banner.jpeg)
+
 # permissions
 
 > Learning Linux permissions the hard way — one command, one mistake, one “ah okay I get it now” at a time.

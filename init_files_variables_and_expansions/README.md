@@ -1,3 +1,5 @@
+![holbertonschool-shell Banner](assets/banner.png)
+
 # init_files_variables_and_expansions
 
 > Variables, aliases, and expansions — because a shell without them is just a very expensive notepad.
