@@ -1,6 +1,4 @@
-<p align="center>
-    <img src="./assets/banner.jpg" alt="banner"/>
-</p>
+![holbertonschool-shell Banner](assets/banner.jpg)
 
 # holbertonschool-shell
 
