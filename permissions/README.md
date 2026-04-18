@@ -1,4 +1,6 @@
-![holbertonschool-shell Banner](assets/banner.jpeg)
+<p align="center">
+  <img src="./assets/banner.jepg" alt="holbertonschool-shell Banner">
+</p>
 
 # permissions
 

@@ -1,4 +1,6 @@
-![holbertonschool-shell Banner](assets/banner.png)
+<p align="center">
+  <img src="./assets/banner.png" alt="holbertonschool-shell Banner">
+</p>
 
 # init_files_variables_and_expansions
 
